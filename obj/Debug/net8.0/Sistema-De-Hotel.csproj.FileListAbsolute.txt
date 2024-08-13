@@ -1,0 +1,15 @@
+F:\Treino\Sistema-De-Hotel\bin\Debug\net8.0\Sistema-De-Hotel.exe
+F:\Treino\Sistema-De-Hotel\bin\Debug\net8.0\Sistema-De-Hotel.deps.json
+F:\Treino\Sistema-De-Hotel\bin\Debug\net8.0\Sistema-De-Hotel.runtimeconfig.json
+F:\Treino\Sistema-De-Hotel\bin\Debug\net8.0\Sistema-De-Hotel.dll
+F:\Treino\Sistema-De-Hotel\bin\Debug\net8.0\Sistema-De-Hotel.pdb
+F:\Treino\Sistema-De-Hotel\obj\Debug\net8.0\Sistema-De-Hotel.GeneratedMSBuildEditorConfig.editorconfig
+F:\Treino\Sistema-De-Hotel\obj\Debug\net8.0\Sistema-De-Hotel.AssemblyInfoInputs.cache
+F:\Treino\Sistema-De-Hotel\obj\Debug\net8.0\Sistema-De-Hotel.AssemblyInfo.cs
+F:\Treino\Sistema-De-Hotel\obj\Debug\net8.0\Sistema-De-Hotel.csproj.CoreCompileInputs.cache
+F:\Treino\Sistema-De-Hotel\obj\Debug\net8.0\Sistema-De-Hotel.sourcelink.json
+F:\Treino\Sistema-De-Hotel\obj\Debug\net8.0\Sistema-De-Hotel.dll
+F:\Treino\Sistema-De-Hotel\obj\Debug\net8.0\refint\Sistema-De-Hotel.dll
+F:\Treino\Sistema-De-Hotel\obj\Debug\net8.0\Sistema-De-Hotel.pdb
+F:\Treino\Sistema-De-Hotel\obj\Debug\net8.0\Sistema-De-Hotel.genruntimeconfig.cache
+F:\Treino\Sistema-De-Hotel\obj\Debug\net8.0\ref\Sistema-De-Hotel.dll

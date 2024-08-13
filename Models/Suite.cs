@@ -10,11 +10,11 @@ namespace Sistema_De_Hotel.Models
         
         public Suite(string tipoSuite) {
             TipoSuite = tipoSuite;
-            TipoDeSuite();
+            DefinirTipoDeSuite();
 
         }
 
-       public void TipoDeSuite() {
+       public void DefinirTipoDeSuite() {
         if (TipoSuite == "Comun") {
             Capacidade = 1;
             ValorDiaria = 70.00m;

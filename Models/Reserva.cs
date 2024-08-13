@@ -1,4 +1,5 @@
 using Sistema_De_Hotel.Models;
+using System;
 
 namespace Sistema_De_Hotel.Models
 {
@@ -16,7 +17,17 @@ namespace Sistema_De_Hotel.Models
             DiasReservados = diasReservados;
         }
 
-        public void CadastrarHospedes() {
+        public void CadastrarHospede(Pessoa hospede) {
+            if (Hospedes.Count < Suite.Capacidade)
+            {
+                Hospedes.Add(hospede);
+            }
+            else
+            {
+                throw new Exception("Capacidade máxima da suíte atingida.");
+            }
+        }
+        public void AdicionarHospede() {
             Console.WriteLine("Informe seu Nome: ");
             string nomeHospede = Console.ReadLine();
             Console.WriteLine("Informa seu Sobrenome: ");
@@ -24,12 +35,21 @@ namespace Sistema_De_Hotel.Models
             Console.WriteLine("Informe seu CPF: ");
             string cpfHospede = Console.ReadLine();
      
-           Pessoa novaPessoa = new Pessoa(nomeHospede, sobrenomeHospede, cpfHospede);
-           Hospedes.Add(novaPessoa);
+           Pessoa hospede = new Pessoa(nomeHospede, sobrenomeHospede, cpfHospede);
+           //reserva.Hospedes.Add(hospede);
 
+           try
+        {
+            CadastrarHospede(hospede); 
+            Console.WriteLine("Hóspede cadastrado com sucesso!");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro: {ex.Message}");
+        }
         }
 
-        public void CadastrarSuite(Suite suite) {
+        public static Reserva CadastrarSuite() {
             Console.WriteLine("Informe o tipo de suite:");
             Console.WriteLine("Comun: Capacidade de 1 pessoa.");
             Console.WriteLine("Plus: Capacidade de 2 pessoas.");
@@ -39,10 +59,7 @@ namespace Sistema_De_Hotel.Models
             if (string.IsNullOrWhiteSpace(hospedeSuite)) {
                 throw new Exception("Informe um tipo de Suite válido.");
             }
-            //if (hospedeSuite != "Comun" && hospedeSuite != "Plus" && hospedeSuite != "Master") {
-           //     throw new Exception("Tipo de Suite inválida. Escolha entre 'Comun', 'Plus' ou 'Master'.");
-           // }
-
+           
             Console.WriteLine("Informe a quantidades de dias que você deseja ficar:");
             string input = Console.ReadLine();
             int diasReservados;
@@ -51,8 +68,11 @@ namespace Sistema_De_Hotel.Models
             throw new Exception("Escolha um número de dias válido.");
             }
 
-           Suite = new Suite(hospedeSuite);
+           Suite suite = new Suite(hospedeSuite);
+           Reserva reserva = new Reserva(suite, diasReservados);
            Console.WriteLine("Suíte cadastrada com sucesso!");
+
+           return reserva;
         }
         public int ObterQuantidadeHospedes() {
            return Hospedes.Count;
@@ -62,14 +82,12 @@ namespace Sistema_De_Hotel.Models
             decimal valorTotal = DiasReservados * Suite.ValorDiaria;
 
             if (DiasReservados >= 10) {
-                valorTotal *= 0.5m;
+                valorTotal *= 0.90m;
             }
             
             return valorTotal; 
             
         }
-
-        
 
     }
 }
